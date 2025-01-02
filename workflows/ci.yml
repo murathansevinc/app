@@ -1,0 +1,19 @@
+name: Otomatik Commit İşlemi
+
+on:
+  push:
+    branches:
+      - main #Hangi branch için tetikleneceğini belirler
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Depoyu Klonla
+      uses: actions/checkout@v3
+
+    - name: Script Çalıştır
+      run: |
+        echo "Commit tespit edildi"
+        echo "Bu işlem commit tetiklendiğinde çalıştı"
